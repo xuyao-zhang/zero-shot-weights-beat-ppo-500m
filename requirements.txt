@@ -1,0 +1,5 @@
+# CPU-only dependencies for 60-second verification & chart generation
+# Note: MinAtar==1.0.15 is an external, unbundled PyPI runtime dependency under GPL-3.0
+numpy
+matplotlib
+MinAtar==1.0.15

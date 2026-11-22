@@ -1,0 +1,25 @@
+{
+  "block": true,
+  "statements": 273,
+  "applied": 273,
+  "entries_written": 1128,
+  "errors": [],
+  "cut_off": false,
+  "nonzero": {
+    "W1": 648,
+    "b1": 28,
+    "W2": 234,
+    "b2": 30,
+    "W3": 30,
+    "b3": 6
+  },
+  "nonzero_total": 976,
+  "max_abs": {
+    "W1": 24.0,
+    "b1": 6.0,
+    "W2": 40.0,
+    "b2": 171.0,
+    "W3": 200.0,
+    "b3": 1320.0
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "title": "First Zero-Shot LLM Weight Network to Beat 500M-Step PPO Across All 3 MinAtar Games",
+  "model": "Gemini 4 Neon (XHigh)",
+  "platform": "Antigravity (default ctx)",
+  "tool_calls": 0,
+  "training_steps": 0,
+  "evaluation_protocol": {
+    "environment": "MinAtar==1.0.15",
+    "architecture": "600 -> 32 -> 32 -> 6 tanh MLP (20,486 params, softmax sampling)",
+    "sticky_action_prob": 0.1,
+    "difficulty_ramping": true,
+    "episodes": 1000,
+    "seed_range": "0..999",
+    "max_steps": 10000,
+    "workers_exact_repro": 15
+  },
+  "baselines": {
+    "ppo500": {
+      "breakout": 25.344,
+      "seaquest": 88.884,
+      "asterix": 55.204,
+      "wwi": 50.0,
+      "wsb_median": 100.0
+    },
+    "ppo100": {
+      "breakout": 15.779,
+      "seaquest": 5.617,
+      "asterix": 25.82,
+      "wwi": 25.1852,
+      "wsb_median": 46.2953
+    },
+    "random": {
+      "breakout": 0.55,
+      "seaquest": 0.09,
+      "asterix": 0.49,
+      "wwi": 0.0,
+      "wsb_median": 0.0
+    }
+  },
+  "frontier_references": [
+    {
+      "label": "Claude Fable 5.2 (high, EN)",
+      "source": "Shawn Hu (Anthropic API, 3/game)",
+      "breakout": 484.5283,
+      "seaquest": 48.8923,
+      "asterix": 71.3117,
+      "wwi": 62.3367,
+      "wsb_median": 129.4398
+    },
+    {
+      "label": "GPT-6 Astra (xhigh, EN)",
+      "source": "MIT CSAIL (Codex CLI, 1/game)",
+      "breakout": 517.411,
+      "seaquest": 53.11,
+      "asterix": 53.178,
+      "wwi": 60.6221,
+      "wsb_median": 96.2971
+    },
+    {
+      "label": "Gemini 4 Carbon (EN)",
+      "source": "Xingyu Dang (reported WWI)",
+      "breakout": null,
+      "seaquest": null,
+      "asterix": null,
+      "wwi": 57.7,
+      "wsb_median": null
+    },
+    {
+      "label": "GPT-6 Astra (Turing, EN)",
+      "source": "Alan Turing Inst. (3-5/game)",
+      "breakout": 456.9,
+      "seaquest": 25.5,
+      "asterix": 66.2,
+      "wwi": 57.2207,
+      "wsb_median": 120.0972
+    },
+    {
+      "label": "GPT-6.1 Sol (high, EN)",
+      "source": "weight-space-bench (OpenRouter, 3/game)",
+      "breakout": 457.893,
+      "seaquest": 11.824,
+      "asterix": 47.798,
+      "wwi": 50.9667,
+      "wsb_median": 86.4642
+    }
+  ],
+  "aggregate": {
+    "en_baseline_wwi": 53.9532,
+    "zh_prompt_wwi": 69.3061,
+    "wwi_delta": 15.3529,
+    "en_baseline_wsb_median": 109.1622,
+    "zh_prompt_wsb_median": 154.3005,
+    "wsb_median_delta": 45.1384,
+    "games_beating_ppo500_en": 2,
+    "games_beating_ppo500_zh": 3,
+    "total_nonzero_weights_en": 3041,
+    "total_nonzero_weights_zh": 4192
+  },
+  "per_game": {
+    "breakout": {
+      "en_baseline": {
+        "mean": 634.477,
+        "se": 7.514163701113194,
+        "max": 827.0,
+        "mean_length": 8235.722,
+        "pct_ppo500": 2556.7758,
+        "wwi_component": 96.236,
+        "statements_applied": 280,
+        "statements_total": 280,
+        "nonzero_total": 1571,
+        "nonzero_by_tensor": {
+          "W1": 1436,
+          "b1": 30,
+          "W2": 76,
+          "b2": 12,
+          "W3": 12,
+          "b3": 5
+        }
+      },
+      "zh_prompt": {
+        "mean": 537.436,
+        "se": 5.9780792346150236,
+        "max": 737.0,
+        "mean_length": 8410.802,
+        "pct_ppo500": 2165.3868,
+        "wwi_component": 95.5857,
+        "statements_applied": 143,
+        "statements_total": 143,
+        "nonzero_total": 2009,
+        "nonzero_by_tensor": {
+          "W1": 1918,
+          "b1": 18,
+          "W2": 44,
+          "b2": 12,
+          "W3": 12,
+          "b3": 5
+        }
+      },
+      "comparison": {
+        "nonzero_a": 1571,
+        "nonzero_b": 2009,
+        "overlapping_nonzero_coords": 1051,
+        "union_nonzero_coords": 2529,
+        "jaccard": 0.4155792803479636,
+        "identical_nonzero_coords": 78,
+        "cosine_similarity": 0.1862089867956131
+      },
+      "z_test": {
+        "delta_score": -97.04099999999994,
+        "pct_gain": -15.294644250303785,
+        "se_diff": 9.602087661673501,
+        "z_stat": -10.106239749022155,
+        "p_value_two_sided": 5.183574514683469e-24
+      }
+    },
+    "seaquest": {
+      "en_baseline": {
+        "mean": 13.869,
+        "se": 0.5518989322615433,
+        "max": 128.0,
+        "mean_length": 450.419,
+        "pct_ppo500": 15.5179,
+        "wwi_component": 13.4334,
+        "statements_applied": 222,
+        "statements_total": 222,
+        "nonzero_total": 550,
+        "nonzero_by_tensor": {
+          "W1": 290,
+          "b1": 31,
+          "W2": 150,
+          "b2": 31,
+          "W3": 42,
+          "b3": 6
+        }
+      },
+      "zh_prompt": {
+        "mean": 94.968,
+        "se": 1.7106078320746563,
+        "max": 193.0,
+        "mean_length": 1865.922,
+        "pct_ppo500": 106.8518,
+        "wwi_component": 51.6562,
+        "statements_applied": 381,
+        "statements_total": 381,
+        "nonzero_total": 1207,
+        "nonzero_by_tensor": {
+          "W1": 978,
+          "b1": 31,
+          "W2": 99,
+          "b2": 30,
+          "W3": 63,
+          "b3": 6
+        }
+      },
+      "comparison": {
+        "nonzero_a": 550,
+        "nonzero_b": 1207,
+        "overlapping_nonzero_coords": 140,
+        "union_nonzero_coords": 1617,
+        "jaccard": 0.08658008658008658,
+        "identical_nonzero_coords": 9,
+        "cosine_similarity": -0.2901022988503213
+      },
+      "z_test": {
+        "delta_score": 81.099,
+        "pct_gain": 584.7501622323167,
+        "se_diff": 1.7974347238736061,
+        "z_stat": 45.11930192670675,
+        "p_value_two_sided": 0.0
+      }
+    },
+    "asterix": {
+      "en_baseline": {
+        "mean": 60.217,
+        "se": 1.0394461791547265,
+        "max": 333.0,
+        "mean_length": 972.202,
+        "pct_ppo500": 109.1622,
+        "wwi_component": 52.1902,
+        "statements_applied": 296,
+        "statements_total": 296,
+        "nonzero_total": 920,
+        "nonzero_by_tensor": {
+          "W1": 552,
+          "b1": 24,
+          "W2": 274,
+          "b2": 32,
+          "W3": 32,
+          "b3": 6
+        }
+      },
+      "zh_prompt": {
+        "mean": 84.914,
+        "se": 1.541134549512047,
+        "max": 430.0,
+        "mean_length": 1166.789,
+        "pct_ppo500": 154.3005,
+        "wwi_component": 60.6765,
+        "statements_applied": 273,
+        "statements_total": 273,
+        "nonzero_total": 976,
+        "nonzero_by_tensor": {
+          "W1": 648,
+          "b1": 28,
+          "W2": 234,
+          "b2": 30,
+          "W3": 30,
+          "b3": 6
+        }
+      },
+      "comparison": {
+        "nonzero_a": 920,
+        "nonzero_b": 976,
+        "overlapping_nonzero_coords": 117,
+        "union_nonzero_coords": 1779,
+        "jaccard": 0.0657672849915683,
+        "identical_nonzero_coords": 5,
+        "cosine_similarity": 0.8633732287787617
+      },
+      "z_test": {
+        "delta_score": 24.697000000000003,
+        "pct_gain": 41.01333510470466,
+        "se_diff": 1.858909373546505,
+        "z_stat": 13.285747197498948,
+        "p_value_two_sided": 2.80048877881663e-40
+      }
+    }
+  },
+  "companion_leaderboard_repo": "https://github.com/opopile/comprehensive-weight-space-programming-leaderboard"
+}

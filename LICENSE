@@ -1,0 +1,68 @@
+Dual-Scope Repository License
+Copyright (c) 2026 opopile
+
+This repository uses a dual-scope open-source license:
+1. Original Python source code and verification/plotting scripts (`scripts/*.py`)
+   are licensed under the MIT License (Section 1 below).
+2. Original documentation, consolidated datasets, generated charts, and local
+   Gemini 4 Neon (XHigh) experimental artifacts (`README.md`, `README.zh-CN.md`,
+   `docs/*.md`, `data/*`, `charts/*`, `artifacts/*`) are licensed under the
+   Creative Commons Attribution 4.0 International License (CC BY 4.0, Section 2 below).
+3. Third-party papers, datasets, community benchmark results, and external runtime
+   dependencies (including `MinAtar==1.0.15`, GPL-3.0, installed externally via PyPI
+   and NOT bundled in this repository) retain their respective upstream licenses;
+   see `THIRD_PARTY.md`.
+
+================================================================================
+Section 1 — MIT License (Applies to `scripts/*.py`)
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 opopile
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+Section 2 — Creative Commons Attribution 4.0 International (CC BY 4.0)
+(Applies to `README.md`, `README.zh-CN.md`, `docs/*.md`, `data/*`, `charts/*`, `artifacts/*`)
+================================================================================
+
+Original documentation, consolidated benchmark tables (`data/*.json`, `data/*.csv`),
+programmatically generated figures (`charts/*.png`), and local Gemini 4 Neon (XHigh)
+experimental artifacts (`artifacts/gemini-4-neon-xhigh/*`) are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0).
+
+Under CC BY 4.0, you are free to:
+- Share: copy and redistribute the material in any medium or format for any purpose,
+  even commercially.
+- Adapt: remix, transform, and build upon the material for any purpose, even
+  commercially.
+
+Under the following terms:
+- Attribution: You must give appropriate credit, provide a link to the license,
+  and indicate if changes were made.
+- No additional restrictions: You may not apply legal terms or technological
+  measures that legally restrict others from doing anything the license permits.
+
+No warranties are given. The license may not give you all of the permissions
+necessary for your intended use.
+
+Canonical Legal Code: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-Readable Deed: https://creativecommons.org/licenses/by/4.0/
