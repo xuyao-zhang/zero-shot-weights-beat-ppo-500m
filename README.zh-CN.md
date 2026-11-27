@@ -1,4 +1,4 @@
-[简体中文 (README.zh-CN.md)](README.zh-CN.md) | [English (README.md)](README.md) | [42 模型综合主排行榜仓库](https://github.com/opopile/comprehensive-weight-space-programming-leaderboard) | [LICENSE](LICENSE) | [THIRD_PARTY.md](THIRD_PARTY.md)
+[简体中文 (README.zh-CN.md)](README.zh-CN.md) | [English (README.md)](README.md) | [42 模型综合主排行榜仓库](https://github.com/xuyao-zhang/comprehensive-weight-space-programming-leaderboard) | [LICENSE](LICENSE) | [THIRD_PARTY.md](THIRD_PARTY.md)
 
 # 零样本手写权重，在全部 3 款 MinAtar 游戏上同时击败苦练 5 亿步的 PPO！
 
@@ -7,7 +7,7 @@
 [![WSB Median: 154.30](https://img.shields.io/badge/WSB%20Median-154.30%20(%2B24.86%20vs%20%231)-16a34a?style=for-the-badge)](#完整成绩单)
 [![0 Training Steps | 0 Tools](https://img.shields.io/badge/Training%20Steps-0%20%7C%20Tools%3A%200-111827?style=for-the-badge)](#60-秒本地-cpu-一键复现验真)
 
-> **0 条训练数据 · 0 次梯度下降 · 0 步环境试错 · 0 次工具调用。**  
+> **0 条训练数据 · 0 次梯度下降 · 0 步环境试错 · 0 次工具调用。**
 > 仅凭一份**忠实简体中文直译**的 MIT CSAIL Experiment 5 提示词，**Gemini 4 Neon（`xhigh`）** 在每款游戏**唯一一次纯文本回复**中，凭空手写 **4,192 个原始浮点权重**填入全零初始化的 `600 -> 32 -> 32 -> 6` 神经网络——**在全部三款 MinAtar 游戏上同时击穿了训练 5 亿步的 PPO-500M**：其中 **Seaquest 暴涨 `+584.8%`（`13.87 -> 94.97`，直接超越 PPO-500M 的 `88.88`）**、**Asterix 轰出全网历史最高纪录 `84.91`**、**Breakout 拿下 `537.44`（PPO 的 21.7 倍）**！
 
 ![Zero-Shot Hand-Written Weights Beat 500M-Step PPO on ALL 3 MinAtar Games](charts/hero_sweep_vs_ppo500m.png)
@@ -69,7 +69,7 @@
 耳听为虚，眼见为实——只需普通 CPU，60 秒即可在本地用官方 `MinAtar==1.0.15` 逐字验证全部权重与 1,000 回合分数：
 
 ```bash
-git clone https://github.com/opopile/zero-shot-weights-beat-ppo-500m
+git clone https://github.com/xuyao-zhang/zero-shot-weights-beat-ppo-500m
 cd zero-shot-weights-beat-ppo-500m
 pip install -r requirements.txt
 
@@ -117,16 +117,16 @@ python scripts/privacy_scan.py
 
 ## 关联仓库与引用
 
-- **42 模型全网综合双公式排行榜（收录 MIT CSAIL、Claude Fable 5.2、Xingyu Dang、`weight-space-bench`、Alan Turing Institute 及全部社区复现）：**  
-  👉 **[`opopile/comprehensive-weight-space-programming-leaderboard`](https://github.com/opopile/comprehensive-weight-space-programming-leaderboard)**
+- **42 模型全网综合双公式排行榜（收录 MIT CSAIL、Claude Fable 5.2、Xingyu Dang、`weight-space-bench`、Alan Turing Institute 及全部社区复现）：**
+  👉 **[`xuyao-zhang/comprehensive-weight-space-programming-leaderboard`](https://github.com/xuyao-zhang/comprehensive-weight-space-programming-leaderboard)**
 
 ```bibtex
-@misc{opopile2026zeroshotppo500m,
-  author       = {opopile},
+@misc{zhang2026zeroshotppo500m,
+  author       = {Xuyao Zhang},
   title        = {Zero-Shot Hand-Written Weights Beat 500-Million-Step PPO Across All 3 MinAtar Games: Cross-Lingual Discovery and Open Replication Call in Weight-Space Programming},
   year         = {2026},
   month        = nov,
-  howpublished = {\url{https://github.com/opopile/zero-shot-weights-beat-ppo-500m}}
+  howpublished = {\url{https://github.com/xuyao-zhang/zero-shot-weights-beat-ppo-500m}}
 }
 
 @misc{takehi2026sparks,
