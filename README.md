@@ -1,4 +1,4 @@
-[English (README.md)](README.md) | [简体中文 (README.zh-CN.md)](README.zh-CN.md) | [Full 42-Model Leaderboard Repo](https://github.com/opopile/comprehensive-weight-space-programming-leaderboard) | [LICENSE](LICENSE) | [THIRD_PARTY.md](THIRD_PARTY.md)
+[English (README.md)](README.md) | [简体中文 (README.zh-CN.md)](README.zh-CN.md) | [Full 42-Model Leaderboard Repo](https://github.com/xuyao-zhang/comprehensive-weight-space-programming-leaderboard) | [LICENSE](LICENSE) | [THIRD_PARTY.md](THIRD_PARTY.md)
 
 # Zero-Shot Hand-Written Weights Beat 500-Million-Step PPO Across ALL 3 MinAtar Games
 
@@ -7,7 +7,7 @@
 [![WSB Median: 154.30](https://img.shields.io/badge/WSB%20Median-154.30%20(%2B24.86%20vs%20%231)-16a34a?style=for-the-badge)](#the-scorecard)
 [![0 Training Steps | 0 Tools](https://img.shields.io/badge/Training%20Steps-0%20%7C%20Tools%3A%200-111827?style=for-the-badge)](#verify-in-60-seconds-cpu-only)
 
-> **Zero training data. Zero gradient updates. Zero environment rollouts. Zero tool calls.**  
+> **Zero training data. Zero gradient updates. Zero environment rollouts. Zero tool calls.**
 > Given only a **faithful Simplified Chinese translation** of the MIT CSAIL Experiment 5 prompt, **Gemini 4 Neon (`xhigh`)** wrote **4,192 raw floating-point weights** into all-zero `600 -> 32 -> 32 -> 6` neural networks in **one single text reply per game**—and **beat 500-million-step PPO on all three MinAtar games simultaneously**, including a jaw-dropping **`+584.8%` surge on Seaquest (`13.87 -> 94.97`, surpassing PPO-500M's `88.88`)** and an **all-time record `84.91` on Asterix**!
 
 ![Zero-Shot Hand-Written Weights Beat 500M-Step PPO on ALL 3 MinAtar Games](charts/hero_sweep_vs_ppo500m.png)
@@ -69,7 +69,7 @@ In [`artifacts/zh_prompt/breakout/reply.md`](artifacts/zh_prompt/breakout/reply.
 Don't take our word for it—clone this repo and run the official `MinAtar==1.0.15` 1,000-episode verifier on your own CPU in ~60 seconds:
 
 ```bash
-git clone https://github.com/opopile/zero-shot-weights-beat-ppo-500m
+git clone https://github.com/xuyao-zhang/zero-shot-weights-beat-ppo-500m
 cd zero-shot-weights-beat-ppo-500m
 pip install -r requirements.txt
 
@@ -117,18 +117,18 @@ Together we can measure the true scaling law—and true cross-lingual sensitivit
 
 ## Related Work & Companion Leaderboard
 
-- **Full 42-Model Dual-Formula Leaderboard (`MIT CSAIL`, `Claude Fable 5.2`, `Xingyu Dang`, `weight-space-bench`, `Alan Turing Institute`, community repos, & Seaquest 1-sentence ablation):**  
-  👉 **[`opopile/comprehensive-weight-space-programming-leaderboard`](https://github.com/opopile/comprehensive-weight-space-programming-leaderboard)**
+- **Full 42-Model Dual-Formula Leaderboard (`MIT CSAIL`, `Claude Fable 5.2`, `Xingyu Dang`, `weight-space-bench`, `Alan Turing Institute`, community repos, & Seaquest 1-sentence ablation):**
+  👉 **[`xuyao-zhang/comprehensive-weight-space-programming-leaderboard`](https://github.com/xuyao-zhang/comprehensive-weight-space-programming-leaderboard)**
 
 ## Citation
 
 ```bibtex
-@misc{opopile2026zeroshotppo500m,
-  author       = {opopile},
+@misc{zhang2026zeroshotppo500m,
+  author       = {Xuyao Zhang},
   title        = {Zero-Shot Hand-Written Weights Beat 500-Million-Step PPO Across All 3 MinAtar Games: Cross-Lingual Discovery and Open Replication Call in Weight-Space Programming},
   year         = {2026},
   month        = nov,
-  howpublished = {\url{https://github.com/opopile/zero-shot-weights-beat-ppo-500m}}
+  howpublished = {\url{https://github.com/xuyao-zhang/zero-shot-weights-beat-ppo-500m}}
 }
 
 @misc{takehi2026sparks,
