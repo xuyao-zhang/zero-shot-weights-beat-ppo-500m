@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 opopile (comprehensive-weight-space-programming-leaderboard contributors)
+# Copyright (c) 2026 Xuyao Zhang (comprehensive-weight-space-programming-leaderboard contributors)
 """Standalone Weight-Space Programming (WSP) MinAtar Experiment 5 parser,
 evaluator, and dual-formula scoring library.
 
