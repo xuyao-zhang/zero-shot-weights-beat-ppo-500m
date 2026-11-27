@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 opopile (zero-shot-weights-beat-ppo-500m contributors)
+# Copyright (c) 2026 Xuyao Zhang (zero-shot-weights-beat-ppo-500m contributors)
 """60-second independent verifier for the 3/3 PPO-500M zero-shot weight sweep.
 
 Checks:
