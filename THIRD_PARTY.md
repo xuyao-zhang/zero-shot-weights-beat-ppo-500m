@@ -13,4 +13,4 @@ This repository releases original Gemini 4 Neon (`xhigh`) zero-shot weight netwo
 3. **Xingyu Dang (`@xingyudang`) — Writing Weights Index (WWI)** (Nov 2, 2026): [X Post](https://x.com/xingyudang/status/2117428789068386630) — WWI formula (`mean of 100 * q / (1 + q)`) and `Gemini 4 Carbon` (`57.7`) reference.
 4. **`eomcaleb/weight-space-bench`** (`MIT` code / `CC BY 4.0` & `GPL-3.0` upstream assets): [GitHub](https://github.com/eomcaleb/weight-space-bench) — WSB PPO-500M median normalized formula and `GPT-6.1 Sol` reference.
 5. **Alan Turing Institute** (Goworek et al., `arXiv:2611.21449`, Nov 2026): [arXiv](https://arxiv.org/abs/2611.21449) — `GPT-6 Astra` multi-run reference.
-6. **Companion Consolidated Leaderboard**: [`opopile/comprehensive-weight-space-programming-leaderboard`](https://github.com/opopile/comprehensive-weight-space-programming-leaderboard) (`MIT` scripts + `CC BY 4.0` docs/data).
+6. **Companion Consolidated Leaderboard**: [`xuyao-zhang/comprehensive-weight-space-programming-leaderboard`](https://github.com/xuyao-zhang/comprehensive-weight-space-programming-leaderboard) (`MIT` scripts + `CC BY 4.0` docs/data).
