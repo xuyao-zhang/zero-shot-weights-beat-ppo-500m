@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2026 opopile (zero-shot-weights-beat-ppo-500m contributors)
+# Copyright (c) 2026 Xuyao Zhang (zero-shot-weights-beat-ppo-500m contributors)
 """Generate two bespoke 300-DPI hero charts for zero-shot-weights-beat-ppo-500m.
 
 Produces:
