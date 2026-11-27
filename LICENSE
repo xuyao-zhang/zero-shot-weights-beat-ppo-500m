@@ -1,5 +1,5 @@
 Dual-Scope Repository License
-Copyright (c) 2026 opopile
+Copyright (c) 2026 Xuyao Zhang
 
 This repository uses a dual-scope open-source license:
 1. Original Python source code and verification/plotting scripts (`scripts/*.py`)
@@ -19,7 +19,7 @@ Section 1 — MIT License (Applies to `scripts/*.py`)
 
 MIT License
 
-Copyright (c) 2026 opopile
+Copyright (c) 2026 Xuyao Zhang
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
